@@ -29,6 +29,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // Back to top functionality
+    window.scrollToTop = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    // Show/hide back to top button
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+
     // Form submission handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -229,11 +247,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Mobile menu toggle (if needed in the future)
+// Mobile menu toggle
 function toggleMobileMenu() {
     const nav = document.querySelector('.nav');
-    nav.classList.toggle('mobile-active');
+    const burgerMenu = document.querySelector('.burger-menu');
+    
+    nav.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (nav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
 }
+
+// Close mobile menu when clicking on a link
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav__link');
+    const nav = document.querySelector('.nav');
+    const burgerMenu = document.querySelector('.burger-menu');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            nav.classList.remove('active');
+            burgerMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !burgerMenu.contains(e.target)) {
+            nav.classList.remove('active');
+            burgerMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
 
 // Add loading animation
 window.addEventListener('load', function() {

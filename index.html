@@ -8,21 +8,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="page">
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>Auto Story SPB</h1>
-                    <p>Только проверенные автомобили</p>
+            <div class="header__content">
+                <div class="header__logo">
+                    <img src="logo.jpg" alt="Auto Story SPB" class="logo-image">
+                    <p class="header__subtitle">Только проверенные автомобили</p>
                 </div>
-                <nav class="nav">
-                    <a href="#about">О нас</a>
-                    <a href="#services">Услуги</a>
-                    <a href="#countries">Страны</a>
-                    <a href="#contact">Контакты</a>
+                <nav class="nav" id="nav">
+                    <a href="#about" class="nav__link">О нас</a>
+                    <a href="#services" class="nav__link">Услуги</a>
+                    <a href="#countries" class="nav__link">Страны</a>
+                    <a href="#videos" class="nav__link">Видеоотзывы</a>
+                    <a href="#articles" class="nav__link">Статьи</a>
+                    <a href="#contact" class="nav__link">Контакты</a>
                 </nav>
+                <button class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
             </div>
         </div>
     </header>
@@ -30,33 +37,33 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Доставка автомобилей из США, Японии, Китая и Кореи</h1>
-                    <p class="hero-subtitle">Только проверенные автомобили с гарантией качества</p>
-                    <div class="hero-stats">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">Доставка автомобилей из США, Японии, Китая и Кореи</h1>
+                    <p class="hero__subtitle">Только проверенные автомобили с гарантией качества</p>
+                    <div class="hero__stats">
                         <div class="stat">
-                            <i class="fas fa-users"></i>
-                            <span>300+ довольных клиентов</span>
+                            <i class="stat__icon fas fa-users"></i>
+                            <span class="stat__text">300+ довольных клиентов</span>
                         </div>
                         <div class="stat">
-                            <i class="fas fa-clock"></i>
-                            <span>Доставка 1-2 месяца</span>
+                            <i class="stat__icon fas fa-clock"></i>
+                            <span class="stat__text">Доставка 1-2 месяца</span>
                         </div>
                         <div class="stat">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Работаем по договору</span>
+                            <i class="stat__icon fas fa-shield-alt"></i>
+                            <span class="stat__text">Работаем по договору</span>
                         </div>
                     </div>
-                    <button class="cta-button" onclick="scrollToContact()">Получить консультацию</button>
+                    <button class="btn btn--primary" onclick="scrollToContact()">Получить консультацию</button>
                 </div>
-                <div class="hero-image">
+                <div class="hero__image">
                     <div class="car-showcase">
-                        <div class="flag-container">
-                            <div class="flag usa"></div>
-                            <div class="flag japan"></div>
-                            <div class="flag china"></div>
-                            <div class="flag korea"></div>
+                        <div class="car-showcase__flags">
+                            <div class="flag flag--usa"></div>
+                            <div class="flag flag--japan"></div>
+                            <div class="flag flag--china"></div>
+                            <div class="flag flag--korea"></div>
                         </div>
                     </div>
                 </div>
@@ -67,33 +74,33 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>О компании Auto Story SPB</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Мы специализируемся на доставке качественных автомобилей из ведущих автомобильных рынков мира. Наша компания гарантирует прозрачность сделки и полное соответствие заявленному качеству.</p>
+            <h2 class="section-title">О компании Auto Story SPB</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p class="about__description">Мы специализируемся на доставке качественных автомобилей из ведущих автомобильных рынков мира. Наша компания гарантирует прозрачность сделки и полное соответствие заявленному качеству.</p>
                     <div class="features">
                         <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Проверенные автомобили</span>
+                            <i class="feature__icon fas fa-check-circle"></i>
+                            <span class="feature__text">Проверенные автомобили</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-file-contract"></i>
-                            <span>Работаем только по договору</span>
+                            <i class="feature__icon fas fa-file-contract"></i>
+                            <span class="feature__text">Работаем только по договору</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Офис в Санкт-Петербурге</span>
+                            <i class="feature__icon fas fa-map-marker-alt"></i>
+                            <span class="feature__text">Офис в Санкт-Петербурге</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-shipping-fast"></i>
-                            <span>Доставка до Владивостока: 1-2 месяца</span>
+                            <i class="feature__icon fas fa-shipping-fast"></i>
+                            <span class="feature__text">Доставка до Владивостока: 1-2 месяца</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
+                <div class="about__image">
                     <div class="office-preview">
-                        <i class="fas fa-building"></i>
-                        <p>Наш офис в СПб</p>
+                        <i class="office-preview__icon fas fa-building"></i>
+                        <p class="office-preview__text">Наш офис в СПб</p>
                     </div>
                 </div>
             </div>
@@ -103,35 +110,35 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Наши услуги</h2>
-            <div class="services-grid">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services__grid">
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-card__icon">
                         <i class="fas fa-search"></i>
                     </div>
-                    <h3>Подбор автомобиля</h3>
-                    <p>Поможем найти идеальный автомобиль под ваши требования и бюджет</p>
+                    <h3 class="service-card__title">Подбор автомобиля</h3>
+                    <p class="service-card__description">Поможем найти идеальный автомобиль под ваши требования и бюджет</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-card__icon">
                         <i class="fas fa-clipboard-check"></i>
                     </div>
-                    <h3>Проверка качества</h3>
-                    <p>Тщательная проверка технического состояния и истории автомобиля</p>
+                    <h3 class="service-card__title">Проверка качества</h3>
+                    <p class="service-card__description">Тщательная проверка технического состояния и истории автомобиля</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-card__icon">
                         <i class="fas fa-ship"></i>
                     </div>
-                    <h3>Доставка</h3>
-                    <p>Полная организация доставки от порта до вашего города</p>
+                    <h3 class="service-card__title">Доставка</h3>
+                    <p class="service-card__description">Полная организация доставки от порта до вашего города</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-card__icon">
                         <i class="fas fa-file-signature"></i>
                     </div>
-                    <h3>Оформление документов</h3>
-                    <p>Помощь в оформлении всех необходимых документов</p>
+                    <h3 class="service-card__title">Оформление документов</h3>
+                    <p class="service-card__description">Помощь в оформлении всех необходимых документов</p>
                 </div>
             </div>
         </div>
@@ -140,48 +147,153 @@
     <!-- Countries Section -->
     <section id="countries" class="countries">
         <div class="container">
-            <h2>Страны поставок</h2>
-            <div class="countries-grid">
+            <h2 class="section-title">Страны поставок</h2>
+            <div class="countries__grid">
                 <div class="country-card">
-                    <div class="country-flag usa"></div>
-                    <h3>США</h3>
-                    <p>Широкий выбор автомобилей с американского рынка. Отличное соотношение цена-качество.</p>
-                    <ul>
-                        <li>Популярные бренды</li>
-                        <li>Низкие цены</li>
-                        <li>Хорошее состояние</li>
+                    <div class="country-card__flag country-card__flag--usa"></div>
+                    <h3 class="country-card__title">США</h3>
+                    <p class="country-card__description">Широкий выбор автомобилей с американского рынка. Отличное соотношение цена-качество.</p>
+                    <ul class="country-card__features">
+                        <li class="country-card__feature">Популярные бренды</li>
+                        <li class="country-card__feature">Низкие цены</li>
+                        <li class="country-card__feature">Хорошее состояние</li>
                     </ul>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag japan"></div>
-                    <h3>Япония</h3>
-                    <p>Качественные японские автомобили с отличной репутацией надежности.</p>
-                    <ul>
-                        <li>Высокое качество</li>
-                        <li>Надежность</li>
-                        <li>Экономичность</li>
+                    <div class="country-card__flag country-card__flag--japan"></div>
+                    <h3 class="country-card__title">Япония</h3>
+                    <p class="country-card__description">Качественные японские автомобили с отличной репутацией надежности.</p>
+                    <ul class="country-card__features">
+                        <li class="country-card__feature">Высокое качество</li>
+                        <li class="country-card__feature">Надежность</li>
+                        <li class="country-card__feature">Экономичность</li>
                     </ul>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag china"></div>
-                    <h3>Китай</h3>
-                    <p>Современные китайские автомобили с передовыми технологиями.</p>
-                    <ul>
-                        <li>Современные технологии</li>
-                        <li>Доступные цены</li>
-                        <li>Богатая комплектация</li>
+                    <div class="country-card__flag country-card__flag--china"></div>
+                    <h3 class="country-card__title">Китай</h3>
+                    <p class="country-card__description">Современные китайские автомобили с передовыми технологиями.</p>
+                    <ul class="country-card__features">
+                        <li class="country-card__feature">Современные технологии</li>
+                        <li class="country-card__feature">Доступные цены</li>
+                        <li class="country-card__feature">Богатая комплектация</li>
                     </ul>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag korea"></div>
-                    <h3>Корея</h3>
-                    <p>Корейские автомобили известны своим качеством и стильным дизайном.</p>
-                    <ul>
-                        <li>Стильный дизайн</li>
-                        <li>Качественная сборка</li>
-                        <li>Гарантия качества</li>
+                    <div class="country-card__flag country-card__flag--korea"></div>
+                    <h3 class="country-card__title">Корея</h3>
+                    <p class="country-card__description">Корейские автомобили известны своим качеством и стильным дизайном.</p>
+                    <ul class="country-card__features">
+                        <li class="country-card__feature">Стильный дизайн</li>
+                        <li class="country-card__feature">Качественная сборка</li>
+                        <li class="country-card__feature">Гарантия качества</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Reviews Section -->
+    <section id="videos" class="videos">
+        <div class="container">
+            <h2 class="section-title">Видеоотзывы наших клиентов</h2>
+            <div class="videos__grid">
+                <div class="video-card">
+                    <div class="video-card__player">
+                        <div class="video-card__placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Видео отзыв о доставке из США</p>
+                        </div>
+                    </div>
+                    <div class="video-card__content">
+                        <h3 class="video-card__title">Отзыв о доставке из США</h3>
+                        <p class="video-card__description">Клиент делится впечатлениями о покупке автомобиля из Америки</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-card__player">
+                        <div class="video-card__placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Видео отзыв о доставке из Японии</p>
+                        </div>
+                    </div>
+                    <div class="video-card__content">
+                        <h3 class="video-card__title">Доставка из Японии</h3>
+                        <p class="video-card__description">Реальный опыт покупки японского автомобиля</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-card__player">
+                        <div class="video-card__placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Видео отзыв о китайских автомобилях</p>
+                        </div>
+                    </div>
+                    <div class="video-card__content">
+                        <h3 class="video-card__title">Китайские автомобили</h3>
+                        <p class="video-card__description">Обзор современных китайских автомобилей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="articles">
+        <div class="container">
+            <h2 class="section-title">Полезные статьи</h2>
+            <div class="articles__grid">
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <i class="fas fa-newspaper"></i>
+                            <p>Как выбрать автомобиль из США</p>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <h3 class="article-card__title">Как выбрать автомобиль из США</h3>
+                        <p class="article-card__excerpt">Полезные советы по выбору автомобиля на американском рынке. На что обратить внимание при покупке.</p>
+                        <div class="article-card__meta">
+                            <span class="article-card__date">15.01.2024</span>
+                            <span class="article-card__read-time">5 мин чтения</span>
+                        </div>
+                        <a href="#" class="article-card__link">Читать далее</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <i class="fas fa-newspaper"></i>
+                            <p>Особенности японских автомобилей</p>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <h3 class="article-card__title">Особенности японских автомобилей</h3>
+                        <p class="article-card__excerpt">Почему японские автомобили так популярны в России и какие модели стоит рассмотреть.</p>
+                        <div class="article-card__meta">
+                            <span class="article-card__date">10.01.2024</span>
+                            <span class="article-card__read-time">7 мин чтения</span>
+                        </div>
+                        <a href="#" class="article-card__link">Читать далее</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <i class="fas fa-newspaper"></i>
+                            <p>Китайские автомобили 2024</p>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <h3 class="article-card__title">Китайские автомобили 2024</h3>
+                        <p class="article-card__excerpt">Обзор лучших китайских автомобилей 2024 года. Новые технологии и доступные цены.</p>
+                        <div class="article-card__meta">
+                            <span class="article-card__date">05.01.2024</span>
+                            <span class="article-card__read-time">6 мин чтения</span>
+                        </div>
+                        <a href="#" class="article-card__link">Читать далее</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -189,49 +301,76 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Свяжитесь с нами</h2>
-            <div class="contact-content">
-                <div class="contact-info">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="contact__content">
+                <div class="contact__info">
                     <div class="contact-item">
-                        <i class="fas fa-user"></i>
-                        <div>
-                            <h4>Руководитель</h4>
-                            <p>Парамонов Максим</p>
+                        <i class="contact-item__icon fas fa-user"></i>
+                        <div class="contact-item__content">
+                            <h4 class="contact-item__title">Руководитель</h4>
+                            <p class="contact-item__text">Парамонов Максим</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Адрес офиса</h4>
-                            <p>Санкт-Петербург</p>
+                        <i class="contact-item__icon fas fa-phone"></i>
+                        <div class="contact-item__content">
+                            <h4 class="contact-item__title">Телефон</h4>
+                            <p class="contact-item__text">+7 (900) 000-00-00</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Время доставки</h4>
-                            <p>1-2 месяца до Владивостока</p>
+                        <i class="contact-item__icon fas fa-map-marker-alt"></i>
+                        <div class="contact-item__content">
+                            <h4 class="contact-item__title">Адрес офиса</h4>
+                            <p class="contact-item__text">Санкт-Петербург</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-users"></i>
-                        <div>
-                            <h4>Наши клиенты</h4>
-                            <p>Более 300 довольных клиентов</p>
+                        <i class="contact-item__icon fas fa-clock"></i>
+                        <div class="contact-item__content">
+                            <h4 class="contact-item__title">Время доставки</h4>
+                            <p class="contact-item__text">1-2 месяца до Владивостока</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="contact-item__icon fas fa-users"></i>
+                        <div class="contact-item__content">
+                            <h4 class="contact-item__title">Наши клиенты</h4>
+                            <p class="contact-item__text">Более 300 довольных клиентов</p>
+                        </div>
+                    </div>
+                    <div class="messengers">
+                        <h4 class="messengers__title">Свяжитесь через мессенджеры:</h4>
+                        <div class="messengers__list">
+                            <a href="https://t.me/autostoryspb" target="_blank" class="messenger-link messenger-link--telegram">
+                                <i class="fab fa-telegram"></i>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="https://wa.me/79000000000" target="_blank" class="messenger-link messenger-link--whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="viber://chat?number=79000000000" class="messenger-link messenger-link--viber">
+                                <i class="fab fa-viber"></i>
+                                <span>Viber</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>Получить консультацию</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                
+                <!-- Закомментированная форма обратной связи -->
+                <!--
+                <div class="contact__form">
+                    <h3 class="contact__form-title">Получить консультацию</h3>
+                    <form id="contactForm" class="form">
+                        <div class="form__group">
+                            <input type="text" id="name" name="name" placeholder="Ваше имя" required class="form__input">
                         </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+                        <div class="form__group">
+                            <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required class="form__input">
                         </div>
-                        <div class="form-group">
-                            <select id="country" name="country" required>
+                        <div class="form__group">
+                            <select id="country" name="country" required class="form__select">
                                 <option value="">Выберите страну поставки</option>
                                 <option value="usa">США</option>
                                 <option value="japan">Япония</option>
@@ -239,12 +378,13 @@
                                 <option value="korea">Корея</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Опишите, какой автомобиль вас интересует" rows="4"></textarea>
+                        <div class="form__group">
+                            <textarea id="message" name="message" placeholder="Опишите, какой автомобиль вас интересует" rows="4" class="form__textarea"></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Отправить заявку</button>
+                        <button type="submit" class="btn btn--secondary">Отправить заявку</button>
                     </form>
                 </div>
+                -->
             </div>
         </div>
     </section>
@@ -252,31 +392,40 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Auto Story SPB</h3>
-                    <p>Только проверенные автомобили из США, Японии, Китая и Кореи</p>
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <img src="logo.jpg" alt="Auto Story SPB" class="footer-logo-image">
+                        <h3 class="footer__title">Auto Story SPB</h3>
+                        <p class="footer__description">Только проверенные автомобили из США, Японии, Китая и Кореи</p>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Контакты</h4>
-                    <p>Парамонов Максим</p>
-                    <p>Санкт-Петербург</p>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Контакты</h4>
+                    <p class="footer__text">Парамонов Максим</p>
+                    <p class="footer__text">+7 (900) 000-00-00</p>
+                    <p class="footer__text">Санкт-Петербург</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Услуги</h4>
-                    <ul>
-                        <li>Подбор автомобиля</li>
-                        <li>Проверка качества</li>
-                        <li>Доставка</li>
-                        <li>Оформление документов</li>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Услуги</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item">Подбор автомобиля</li>
+                        <li class="footer__item">Проверка качества</li>
+                        <li class="footer__item">Доставка</li>
+                        <li class="footer__item">Оформление документов</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Auto Story SPB. Все права защищены.</p>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 Auto Story SPB. Все права защищены.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
