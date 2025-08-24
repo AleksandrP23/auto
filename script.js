@@ -336,23 +336,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const video3Container = document.getElementById("video-3");
     
     if (video1Container) {
-        const video1 = new GraphLazyVideo("video.MP4", {
+        const video1 = new GraphLazyVideo("video.mp4", {
             container: video1Container,
             isFile: true
         });
     }
 
     if (video2Container) {
-        const video2 = new GraphLazyVideo("video.MP4", {
+        const video2 = new GraphLazyVideo("video.mp4", {
             container: video2Container,
             isFile: true
         });
     }
 
     if (video3Container) {
-        const video3 = new GraphLazyVideo("video.MP4", {
+        const video3 = new GraphLazyVideo("video.mp4", {
             container: video3Container,
             isFile: true
         });
     }
+
 }); 
