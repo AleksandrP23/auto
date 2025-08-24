@@ -1,365 +1,631 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Story SPB - Доставка автомобилей из США, Японии, Китая и Кореи</title>
-    <link rel="stylesheet" href="styles.css?v=2">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Story SPB - Доставка автомобилей из США, Японии, Китая и Кореи</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body class="page">
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header__content">
-                <div class="header__logo">
-                    <img src="logo.jpg" alt="Auto Story SPB" class="logo-image">
-                    <p class="header__subtitle">Только проверенные автомобили</p>
-                </div>
-                <nav class="nav" id="nav">
-                    <a href="#about" class="nav__link">О нас</a>
-                    <a href="#services" class="nav__link">Услуги</a>
-                    <a href="#countries" class="nav__link">Страны</a>
-                    <a href="#videos" class="nav__link">Видеоотзывы</a>
-                    <a href="#articles" class="nav__link">Статьи</a>
-                    <a href="#contact" class="nav__link">Контакты</a>
-                </nav>
-                <button class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <a href="index.html" class="header__logo">
+          <img src="logo.jpg" alt="Auto Story SPB" class="logo-image">
+          <p class="header__subtitle">Только проверенные автомобили</p>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="#about" class="nav__link">О нас</a>
+          <a href="#services" class="nav__link">Услуги</a>
+          <a href="#countries" class="nav__link">Страны</a>
+          <a href="#videos" class="nav__link">Отзывы</a>
+          <a href="articles.html" class="nav__link">Статьи</a>
+          <a href="auto-news.html" class="nav__link">Новинки</a>
+          <a href="#contact" class="nav__link">Контакты</a>
+        </nav>
+        <button class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__content">
-                <div class="hero__text">
-                    <h1 class="hero__title">Доставка автомобилей из США, Японии, Китая и Кореи</h1>
-                    <p class="hero__subtitle">Только проверенные автомобили с гарантией качества</p>
-                    <div class="hero__stats">
-                        <div class="stat">
-                            <i class="stat__icon fas fa-users"></i>
-                            <span class="stat__text">300+ довольных клиентов</span>
-                        </div>
-                        <div class="stat">
-                            <i class="stat__icon fas fa-clock"></i>
-                            <span class="stat__text">Доставка 1-2 месяца</span>
-                        </div>
-                        <div class="stat">
-                            <i class="stat__icon fas fa-shield-alt"></i>
-                            <span class="stat__text">Работаем по договору</span>
-                        </div>
-                    </div>
-                    <button class="btn btn--primary" onclick="scrollToContact()">Получить консультацию</button>
-                </div>
-                <div class="hero__image">
-                    <div class="car-showcase">
-                        <div class="car-showcase__flags">
-                            <div class="flag flag--usa"></div>
-                            <div class="flag flag--japan"></div>
-                            <div class="flag flag--china"></div>
-                            <div class="flag flag--korea"></div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1 class="hero__title">Доставка автомобилей из США, Японии, Китая и Кореи</h1>
+          <p class="hero__subtitle">Только проверенные автомобили с гарантией качества</p>
+          <div class="hero__stats">
+            <div class="stat">
+              <i class="stat__icon fas fa-users"></i>
+              <span class="stat__text">300+ довольных клиентов</span>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">О компании Auto Story SPB</h2>
-            <div class="about__content">
-                <div class="about__text">
-                    <p class="about__description">Мы специализируемся на доставке качественных автомобилей из ведущих автомобильных рынков мира. Наша компания гарантирует прозрачность сделки и полное соответствие заявленному качеству.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <i class="feature__icon fas fa-check-circle"></i>
-                            <span class="feature__text">Проверенные автомобили</span>
-                        </div>
-                        <div class="feature">
-                            <i class="feature__icon fas fa-file-contract"></i>
-                            <span class="feature__text">Работаем только по договору</span>
-                        </div>
-                        <div class="feature">
-                            <i class="feature__icon fas fa-map-marker-alt"></i>
-                            <span class="feature__text">Офис в Санкт-Петербурге</span>
-                        </div>
-                        <div class="feature">
-                            <i class="feature__icon fas fa-shipping-fast"></i>
-                            <span class="feature__text">Доставка до Владивостока: 1-2 месяца</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about__image">
-                    <div class="office-preview">
-                        <i class="office-preview__icon fas fa-building"></i>
-                        <p class="office-preview__text">Наш офис в СПб</p>
-                    </div>
-                </div>
+            <div class="stat">
+              <i class="stat__icon fas fa-clock"></i>
+              <span class="stat__text">Доставка 1-2 месяца</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Наши услуги</h2>
-            <div class="services__grid">
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 class="service-card__title">Подбор автомобиля</h3>
-                    <p class="service-card__description">Поможем найти идеальный автомобиль под ваши требования и бюджет</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3 class="service-card__title">Проверка качества</h3>
-                    <p class="service-card__description">Тщательная проверка технического состояния и истории автомобиля</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <i class="fas fa-ship"></i>
-                    </div>
-                    <h3 class="service-card__title">Доставка</h3>
-                    <p class="service-card__description">Полная организация доставки от порта до вашего города</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <i class="fas fa-file-signature"></i>
-                    </div>
-                    <h3 class="service-card__title">Оформление документов</h3>
-                    <p class="service-card__description">Помощь в оформлении всех необходимых документов</p>
-                </div>
+            <div class="stat">
+              <i class="stat__icon fas fa-shield-alt"></i>
+              <span class="stat__text">Работаем по договору</span>
             </div>
+          </div>
+          <button class="btn btn--primary" onclick="scrollToContact()">Получить консультацию</button>
         </div>
-    </section>
+        <div class="hero__image">
+          <div class="car-showcase">
+            <div class="car-showcase__flags">
+              <!-- USA Flag -->
+              <div class="flag flag--usa">
+                <svg xmlns="http://www.w3.org/2000/svg" id="flag__svg" viewBox="0 0 640 480">
+                  <g fill-rule="evenodd">
+                    <g stroke-width="1pt">
+                      <path fill="#bd3d44"
+                        d="M0 0h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8V197H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8V512H0z"
+                        transform="scale(.9375)" />
+                      <path fill="#fff"
+                        d="M0 39.4h972.8v39.4H0zm0 78.8h972.8v39.3H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0z"
+                        transform="scale(.9375)" />
+                    </g>
+                    <path fill="#192f5d" d="M0 0h389.1v275.7H0z" transform="scale(.9375)" />
+                    <path fill="#fff"
+                      d="M32.4 11.8L36 22.7h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7H29zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zm64.8 0l3.6 10.9H177l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7h11.5zm64.9 0l3.5 10.9H242l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.2-6.7h11.4zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.5zM64.9 39.4l3.5 10.9h11.5L70.6 57 74 67.9l-9-6.7-9.3 6.7L59 57l-9-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 10.9-9.3-6.7-9.3 6.7L124 57l-9.3-6.7h11.5zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.7-9.3 6.7 3.5-10.9-9.2-6.7H191zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 10.9-9.3-6.7-9.2 6.7 3.5-10.9-9.3-6.7H256zm64.9 0l3.5 10.9h11.5L330 57l3.5 10.9-9.2-6.7-9.3 6.7 3.5-10.9-9.2-6.7h11.4zM32.4 66.9L36 78h11.4l-9.2 6.7 3.5 10.9-9.3-6.8-9.2 6.8 3.5-11-9.3-6.7H29zm64.9 0l3.5 11h11.5l-9.3 6.7 3.5 10.9-9.2-6.8-9.3 6.8 3.5-11-9.2-6.7h11.4zm64.8 0l3.6 11H177l-9.2 6.7 3.5 10.9-9.3-6.8-9.2 6.8 3.5-11-9.3-6.7h11.5zm64.9 0l3.5 11H242l-9.3 6.7 3.6 10.9-9.3-6.8-9.3 6.8 3.6-11-9.3-6.7h11.4zm64.8 0l3.6 11h11.4l-9.2 6.7 3.5 10.9-9.3-6.8-9.2 6.8 3.5-11-9.2-6.7h11.4zm64.9 0l3.5 11h11.5l-9.3 6.7 3.6 10.9-9.3-6.8-9.3 6.8 3.6-11-9.3-6.7h11.5zM64.9 94.5l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.5zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7H191zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7H256zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zM32.4 122.1L36 133h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7H29zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.7-9.3 6.7 3.5-10.9-9.2-6.7h11.4zm64.8 0l3.6 10.9H177l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7h11.5zm64.9 0l3.5 10.9H242l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.2-6.7h11.4zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.5zM64.9 149.7l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.8-9.3 6.8 3.5-11-9.2-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 10.9-9.3-6.8-9.3 6.8 3.6-11-9.3-6.7h11.5zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.8-9.3 6.8 3.5-11-9.2-6.7H191zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 10.9-9.3-6.8-9.2 6.8 3.5-11-9.3-6.7H256zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.8-9.3 6.8 3.5-11-9.2-6.7h11.4zM32.4 177.2l3.6 11h11.4l-9.2 6.7 3.5 10.8-9.3-6.7-9.2 6.7 3.5-10.9-9.3-6.7H29zm64.9 0l3.5 11h11.5l-9.3 6.7 3.6 10.8-9.3-6.7-9.3 6.7 3.6-10.9-9.3-6.7h11.4zm64.8 0l3.6 11H177l-9.2 6.7 3.5 10.8-9.3-6.7-9.2 6.7 3.5-10.9-9.3-6.7h11.5zm64.9 0l3.5 11H242l-9.3 6.7 3.6 10.8-9.3-6.7-9.3 6.7 3.6-10.9-9.3-6.7h11.4zm64.8 0l3.6 11h11.4l-9.2 6.7 3.5 10.8-9.3-6.7-9.2 6.7 3.5-10.9-9.2-6.7h11.4zm64.9 0l3.5 11h11.5l-9.3 6.7 3.6 10.8-9.3-6.7-9.3 6.7 3.6-10.9-9.3-6.7h11.5zM64.9 204.8l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.5zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7H191zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7H256zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zM32.4 232.4l3.6 10.9h11.4l-9.2 6.7 3.5 10.9-9.3-6.7-9.2 6.7 3.5-11-9.3-6.7H29zm64.9 0l3.5 10.9h11.5L103 250l3.6 10.9-9.3-6.7-9.3 6.7 3.6-11-9.3-6.7h11.4zm64.8 0l3.6 10.9H177l-9 6.7 3.5 10.9-9.3-6.7-9.2 6.7 3.5-11-9.3-6.7h11.5zm64.9 0l3.5 10.9H242l-9.3 6.7 3.6 10.9-9.3-6.7-9.3 6.7 3.6-11-9.3-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 10.9-9.3-6.7-9.2 6.7 3.5-11-9.2-6.7h11.4zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.6 10.9-9.3-6.7-9.3 6.7 3.6-11-9.3-6.7h11.5z"
+                      transform="scale(.9375)" />
+                  </g>
+                </svg>
+              </div>
 
-    <!-- Countries Section -->
-    <section id="countries" class="countries">
-        <div class="container">
-            <h2 class="section-title">Страны поставок</h2>
-            <div class="countries__grid">
-                <div class="country-card">
-                    <div class="country-card__flag country-card__flag--usa"></div>
-                    <h3 class="country-card__title">США</h3>
-                    <p class="country-card__description">Широкий выбор автомобилей с американского рынка. Отличное соотношение цена-качество.</p>
-                    <ul class="country-card__features">
-                        <li class="country-card__feature">Популярные бренды</li>
-                        <li class="country-card__feature">Низкие цены</li>
-                        <li class="country-card__feature">Хорошее состояние</li>
-                    </ul>
-                </div>
-                <div class="country-card">
-                    <div class="country-card__flag country-card__flag--japan"></div>
-                    <h3 class="country-card__title">Япония</h3>
-                    <p class="country-card__description">Качественные японские автомобили с отличной репутацией надежности.</p>
-                    <ul class="country-card__features">
-                        <li class="country-card__feature">Высокое качество</li>
-                        <li class="country-card__feature">Надежность</li>
-                        <li class="country-card__feature">Экономичность</li>
-                    </ul>
-                </div>
-                <div class="country-card">
-                    <div class="country-card__flag country-card__flag--china"></div>
-                    <h3 class="country-card__title">Китай</h3>
-                    <p class="country-card__description">Современные китайские автомобили с передовыми технологиями.</p>
-                    <ul class="country-card__features">
-                        <li class="country-card__feature">Современные технологии</li>
-                        <li class="country-card__feature">Доступные цены</li>
-                        <li class="country-card__feature">Богатая комплектация</li>
-                    </ul>
-                </div>
-                <div class="country-card">
-                    <div class="country-card__flag country-card__flag--korea"></div>
-                    <h3 class="country-card__title">Корея</h3>
-                    <p class="country-card__description">Корейские автомобили известны своим качеством и стильным дизайном.</p>
-                    <ul class="country-card__features">
-                        <li class="country-card__feature">Стильный дизайн</li>
-                        <li class="country-card__feature">Качественная сборка</li>
-                        <li class="country-card__feature">Гарантия качества</li>
-                    </ul>
-                </div>
+              <!-- Japan Flag -->
+              <div class="flag flag--japan">
+                <svg xmlns="http://www.w3.org/2000/svg" id="flag__svg" viewBox="0 0 640 480">
+                  <defs>
+                    <clipPath id="jp-a">
+                      <path fill-opacity=".7" d="M-88 32h640v480H-88z" />
+                    </clipPath>
+                  </defs>
+                  <g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#jp-a)" transform="translate(88 -32)">
+                    <path fill="#fff" d="M-128 32h720v480h-720z" />
+                    <circle cx="523.1" cy="344.1" r="194.9" fill="#d30000"
+                      transform="translate(-168.4 8.6) scale(.76554)" />
+                  </g>
+                </svg>
+              </div>
+
+              <!-- China Flag -->
+              <div class="flag flag--china">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag__svg"
+                  viewBox="0 0 640 480">
+                  <defs>
+                    <path id="a" fill="#ffde00" d="M-.6.8L0-1 .6.8-1-.3h2z" />
+                  </defs>
+                  <path fill="#de2910" d="M0 0h640v480H0z" />
+                  <use width="30" height="20" transform="matrix(71.9991 0 0 72 120 120)" xlink:href="#a" />
+                  <use width="30" height="20" transform="matrix(-12.33562 -20.5871 20.58684 -12.33577 240.3 48)"
+                    xlink:href="#a" />
+                  <use width="30" height="20" transform="matrix(-3.38573 -23.75998 23.75968 -3.38578 288 95.8)"
+                    xlink:href="#a" />
+                  <use width="30" height="20" transform="matrix(6.5991 -23.0749 23.0746 6.59919 288 168)"
+                    xlink:href="#a" />
+                  <use width="30" height="20" transform="matrix(14.9991 -18.73557 18.73533 14.99929 240 216)"
+                    xlink:href="#a" />
+                </svg>
+              </div>
+
+              <!-- Korea Flag -->
+              <div class="flag flag--korea">
+                <svg xmlns="http://www.w3.org/2000/svg" id="flag__svg" viewBox="0 0 640 480">
+                  <defs>
+                    <clipPath id="kr-a">
+                      <path fill-opacity=".7" d="M-95.8-.4h682.7v512H-95.8z" />
+                    </clipPath>
+                  </defs>
+                  <g fill-rule="evenodd" clip-path="url(#kr-a)" transform="translate(89.8 .4) scale(.9375)">
+                    <path fill="#fff" d="M610.6 511.6h-730.2V-.4h730.2z" />
+                    <path fill="#fff" d="M251.9 256a112.5 112.5 0 11-225 0 112.5 112.5 0 01225 0z" />
+                    <path fill="#c70000"
+                      d="M393 262.6c0 81-65 146.8-145.3 146.8s-145.2-65.8-145.2-146.8 65-146.9 145.3-146.9S393 181.6 393 262.6z" />
+                    <path d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8zm27.4 23.7l83.6-96.7 19.9 17-83.7 96.9z" />
+                    <path d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8z" />
+                    <path d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8zm55.4 48l83.6-96.9 19.9 17.2-83.7 96.8z" />
+                    <path d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8z" />
+                    <path
+                      d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8zm508.8-96.8l83 97.4-20 17-83-97.4zm-55.7 47.5l83 97.4-20 17-83-97.4z" />
+                    <path fill="#fff" d="M417.6 133.2L496 65.4l14.7 17-84 75.4-9.3-24.6z" />
+                    <path
+                      d="M514.2 372l-80.4 95.8-19.7-16.4 80.4-95.8zM431.8 53.1l83 97.4-19.9 17L412 70zm109.7 341.6L461 490.5l-19.8-16.4 80.5-95.8zm-55.1-45.8L406 444.7l-19.7-16.4 80.4-95.8z" />
+                    <path fill="#3d5897"
+                      d="M104.6 236.7c4.6 37 11.3 78.2 68.2 82.4 21.3 1.3 62.8-5 77-63.2 18.8-55.8 75-71.8 113.3-41.6C385 228.5 391 251 392.4 268c-1.7 54-32.9 101-72.8 122-46 27.3-109.6 27.9-165.3-13.5-25.1-23.5-60.2-67-49.7-139.8z" />
+                    <path fill="#fff" d="M436 370.6l78.6 67.6-14.6 17-87.1-71.8 23-12.8z" />
+                    <path d="M-1.9 357.2l83 97.3-20 17-83-97.3z" />
+                    <path fill="#fff" d="M-16.2 437.3l78.6-67.9 14.7 17-84 75.5-9.3-24.7z" />
+                    <path d="M25.7 333.7l83 97.3-20 17-83-97.3zM-30 381.2l83 97.3-20 17-83-97.3z" />
+                  </g>
+                </svg>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Video Reviews Section -->
-    <section id="videos" class="videos">
-        <div class="container">
-            <h2 class="section-title">Видеоотзывы наших клиентов</h2>
-            <div class="videos__grid">
-                <div class="video-card">
-                    <div class="video-card__player">
-                        <div class="video-card__placeholder">
-                            <i class="fas fa-play-circle"></i>
-                            <p>Видео отзыв о доставке из США</p>
-                        </div>
-                    </div>
-                    <div class="video-card__content">
-                        <h3 class="video-card__title">Отзыв о доставке из США</h3>
-                        <p class="video-card__description">Клиент делится впечатлениями о покупке автомобиля из Америки</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-card__player">
-                        <div class="video-card__placeholder">
-                            <i class="fas fa-play-circle"></i>
-                            <p>Видео отзыв о доставке из Японии</p>
-                        </div>
-                    </div>
-                    <div class="video-card__content">
-                        <h3 class="video-card__title">Доставка из Японии</h3>
-                        <p class="video-card__description">Реальный опыт покупки японского автомобиля</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-card__player">
-                        <div class="video-card__placeholder">
-                            <i class="fas fa-play-circle"></i>
-                            <p>Видео отзыв о китайских автомобилях</p>
-                        </div>
-                    </div>
-                    <div class="video-card__content">
-                        <h3 class="video-card__title">Китайские автомобили</h3>
-                        <p class="video-card__description">Обзор современных китайских автомобилей</p>
-                    </div>
-                </div>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">О компании Auto Story SPB</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <p class="about__description">Мы специализируемся на доставке качественных автомобилей из ведущих
+            автомобильных рынков мира. Наша компания гарантирует прозрачность сделки и полное соответствие заявленному
+            качеству.</p>
+          <div class="features">
+            <div class="feature">
+              <i class="feature__icon fas fa-check-circle"></i>
+              <span class="feature__text">Проверенные автомобили</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Articles Section -->
-    <section id="articles" class="articles">
-        <div class="container">
-            <h2 class="section-title">Полезные статьи</h2>
-            <div class="articles__grid">
-                <article class="article-card">
-                    <div class="article-card__image">
-                        <div class="article-card__placeholder">
-                            <i class="fas fa-newspaper"></i>
-                            <p>Как выбрать автомобиль из США</p>
-                        </div>
-                    </div>
-                    <div class="article-card__content">
-                        <h3 class="article-card__title">Как выбрать автомобиль из США</h3>
-                        <p class="article-card__excerpt">Полезные советы по выбору автомобиля на американском рынке. На что обратить внимание при покупке.</p>
-                        <div class="article-card__meta">
-                            <span class="article-card__date">15.01.2024</span>
-                            <span class="article-card__read-time">5 мин чтения</span>
-                        </div>
-                        <a href="#" class="article-card__link">Читать далее</a>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <div class="article-card__image">
-                        <div class="article-card__placeholder">
-                            <i class="fas fa-newspaper"></i>
-                            <p>Особенности японских автомобилей</p>
-                        </div>
-                    </div>
-                    <div class="article-card__content">
-                        <h3 class="article-card__title">Особенности японских автомобилей</h3>
-                        <p class="article-card__excerpt">Почему японские автомобили так популярны в России и какие модели стоит рассмотреть.</p>
-                        <div class="article-card__meta">
-                            <span class="article-card__date">10.01.2024</span>
-                            <span class="article-card__read-time">7 мин чтения</span>
-                        </div>
-                        <a href="#" class="article-card__link">Читать далее</a>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <div class="article-card__image">
-                        <div class="article-card__placeholder">
-                            <i class="fas fa-newspaper"></i>
-                            <p>Китайские автомобили 2024</p>
-                        </div>
-                    </div>
-                    <div class="article-card__content">
-                        <h3 class="article-card__title">Китайские автомобили 2024</h3>
-                        <p class="article-card__excerpt">Обзор лучших китайских автомобилей 2024 года. Новые технологии и доступные цены.</p>
-                        <div class="article-card__meta">
-                            <span class="article-card__date">05.01.2024</span>
-                            <span class="article-card__read-time">6 мин чтения</span>
-                        </div>
-                        <a href="#" class="article-card__link">Читать далее</a>
-                    </div>
-                </article>
+            <div class="feature">
+              <i class="feature__icon fas fa-file-contract"></i>
+              <span class="feature__text">Работаем только по договору</span>
             </div>
+            <div class="feature">
+              <i class="feature__icon fas fa-map-marker-alt"></i>
+              <span class="feature__text">Офис в Санкт-Петербурге</span>
+            </div>
+            <div class="feature">
+              <i class="feature__icon fas fa-shipping-fast"></i>
+              <span class="feature__text">Доставка до Владивостока: 1-2 месяца</span>
+            </div>
+          </div>
         </div>
-    </section>
+        <div class="about__image">
+          <div class="office-preview">
+            <i class="office-preview__icon fas fa-building"></i>
+            <p class="office-preview__text">Наш офис в СПб</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Свяжитесь с нами</h2>
-            <div class="contact__content">
-                <div class="contact__info">
-                    <div class="contact-item">
-                        <i class="contact-item__icon fas fa-user"></i>
-                        <div class="contact-item__content">
-                            <h4 class="contact-item__title">Руководитель</h4>
-                            <p class="contact-item__text">Парамонов Максим</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="contact-item__icon fas fa-phone"></i>
-                        <div class="contact-item__content">
-                            <h4 class="contact-item__title">Телефон</h4>
-                            <p class="contact-item__text">+7 (900) 000-00-00</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="contact-item__icon fas fa-map-marker-alt"></i>
-                        <div class="contact-item__content">
-                            <h4 class="contact-item__title">Адрес офиса</h4>
-                            <p class="contact-item__text">Санкт-Петербург</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="contact-item__icon fas fa-clock"></i>
-                        <div class="contact-item__content">
-                            <h4 class="contact-item__title">Время доставки</h4>
-                            <p class="contact-item__text">1-2 месяца до Владивостока</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="contact-item__icon fas fa-users"></i>
-                        <div class="contact-item__content">
-                            <h4 class="contact-item__title">Наши клиенты</h4>
-                            <p class="contact-item__text">Более 300 довольных клиентов</p>
-                        </div>
-                    </div>
-                    <div class="messengers">
-                        <h4 class="messengers__title">Свяжитесь через мессенджеры:</h4>
-                        <div class="messengers__list">
-                            <a href="https://t.me/autostoryspb" target="_blank" class="messenger-link messenger-link--telegram">
-                                <i class="fab fa-telegram"></i>
-                                <span>Telegram</span>
-                            </a>
-                            <a href="https://wa.me/79000000000" target="_blank" class="messenger-link messenger-link--whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                                <span>WhatsApp</span>
-                            </a>
-                            <a href="viber://chat?number=79000000000" class="messenger-link messenger-link--viber">
-                                <i class="fab fa-viber"></i>
-                                <span>Viber</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Закомментированная форма обратной связи -->
-                <!--
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Наши услуги</h2>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3 class="service-card__title">Подбор автомобиля</h3>
+          <p class="service-card__description">Поможем найти идеальный автомобиль под ваши требования и бюджет</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3 class="service-card__title">Проверка качества</h3>
+          <p class="service-card__description">Тщательная проверка технического состояния и истории автомобиля</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <i class="fas fa-ship"></i>
+          </div>
+          <h3 class="service-card__title">Доставка</h3>
+          <p class="service-card__description">Полная организация доставки от порта до вашего города</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <h3 class="service-card__title">Оформление документов</h3>
+          <p class="service-card__description">Помощь в оформлении всех необходимых документов</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countries Section -->
+
+  <section id="countries" class="countries">
+    <div class="container">
+      <h2 class="section-title">Страны поставок</h2>
+      <div class="countries__grid">
+        <div class="country-card">
+          <div class="country-card__flag">
+            <svg xmlns="http://www.w3.org/2000/svg" class="country-card__flag-svg" viewBox="0 0 640 480">
+              <g fill-rule="evenodd">
+                <g stroke-width="1pt">
+                  <path fill="#bd3d44"
+                    d="M0 0h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8V197H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8V512H0z"
+                    transform="scale(.9375)" />
+                  <path fill="#fff"
+                    d="M0 39.4h972.8v39.4H0zm0 78.8h972.8v39.3H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0z"
+                    transform="scale(.9375)" />
+                </g>
+                <path fill="#192f5d" d="M0 0h389.1v275.7H0z" transform="scale(.9375)" />
+                <path fill="#fff"
+                  d="M32.4 11.8L36 22.7h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7H29zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zm64.8 0l3.6 10.9H177l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7h11.5zm64.9 0l3.5 10.9H242l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.2-6.7h11.4zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.5zM64.9 39.4l3.5 10.9h11.5L70.6 57 74 67.9l-9-6.7-9.3 6.7L59 57l-9-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 10.9-9.3-6.7-9.3 6.7L124 57l-9.3-6.7h11.5zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.7-9.3 6.7 3.5-10.9-9.2-6.7H191zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 10.9-9.3-6.7-9.2 6.7 3.5-10.9-9.3-6.7H256zm64.9 0l3.5 10.9h11.5L330 57l3.5 10.9-9.2-6.7-9.3 6.7 3.5-10.9-9.2-6.7h11.4zM32.4 66.9L36 78h11.4l-9.2 6.7 3.5 10.9-9.3-6.8-9.2 6.8 3.5-11-9.3-6.7H29zm64.9 0l3.5 11h11.5l-9.3 6.7 3.5 10.9-9.2-6.8-9.3 6.8 3.5-11-9.2-6.7h11.4zm64.8 0l3.6 11H177l-9.2 6.7 3.5 10.9-9.3-6.8-9.2 6.8 3.5-11-9.3-6.7h11.5zm64.9 0l3.5 11H242l-9.3 6.7 3.6 10.9-9.3-6.8-9.3 6.8 3.6-11-9.3-6.7h11.4zm64.8 0l3.6 11h11.4l-9.2 6.7 3.5 10.9-9.3-6.8-9.2 6.8 3.5-11-9.2-6.7h11.4zm64.9 0l3.5 11h11.5l-9.3 6.7 3.6 10.9-9.3-6.8-9.3 6.8 3.6-11-9.3-6.7h11.5zM64.9 94.5l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.5zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7H191zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7H256zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zM32.4 122.1L36 133h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7H29zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.7-9.3 6.7 3.5-10.9-9.2-6.7h11.4zm64.8 0l3.6 10.9H177l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7h11.5zm64.9 0l3.5 10.9H242l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.2-6.7h11.4zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.5zM64.9 149.7l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.8-9.3 6.8 3.5-11-9.2-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 10.9-9.3-6.8-9.3 6.8 3.6-11-9.3-6.7h11.5zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.8-9.3 6.8 3.5-11-9.2-6.7H191zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 10.9-9.3-6.8-9.2 6.8 3.5-11-9.3-6.7H256zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 10.9-9.2-6.8-9.3 6.8 3.5-11-9.2-6.7h11.4zM32.4 177.2l3.6 11h11.4l-9.2 6.7 3.5 10.8-9.3-6.7-9.2 6.7 3.5-10.9-9.3-6.7H29zm64.9 0l3.5 11h11.5l-9.3 6.7 3.6 10.8-9.3-6.7-9.3 6.7 3.6-10.9-9.3-6.7h11.4zm64.8 0l3.6 11H177l-9.2 6.7 3.5 10.8-9.3-6.7-9.2 6.7 3.5-10.9-9.3-6.7h11.5zm64.9 0l3.5 11H242l-9.3 6.7 3.6 10.8-9.3-6.7-9.3 6.7 3.6-10.9-9.3-6.7h11.4zm64.8 0l3.6 11h11.4l-9.2 6.7 3.5 10.8-9.3-6.7-9.2 6.7 3.5-10.9-9.2-6.7h11.4zm64.9 0l3.5 11h11.5l-9.3 6.7 3.6 10.8-9.3-6.7-9.3 6.7 3.6-10.9-9.3-6.7h11.5zM64.9 204.8l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.3 6.7 3.6 11-9.3-6.8-9.3 6.7 3.6-10.9-9.3-6.7h11.5zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7H191zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 11-9.3-6.8-9.2 6.7 3.5-10.9-9.3-6.7H256zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.5 11-9.2-6.8-9.3 6.7 3.5-10.9-9.2-6.7h11.4zM32.4 232.4l3.6 10.9h11.4l-9.2 6.7 3.5 10.9-9.3-6.7-9.2 6.7 3.5-11-9.3-6.7H29zm64.9 0l3.5 10.9h11.5L103 250l3.6 10.9-9.3-6.7-9.3 6.7 3.6-11-9.3-6.7h11.4zm64.8 0l3.6 10.9H177l-9 6.7 3.5 10.9-9.3-6.7-9.2 6.7 3.5-11-9.3-6.7h11.5zm64.9 0l3.5 10.9H242l-9.3 6.7 3.6 10.9-9.3-6.7-9.3 6.7 3.6-11-9.3-6.7h11.4zm64.8 0l3.6 10.9h11.4l-9.2 6.7 3.5 10.9-9.3-6.7-9.2 6.7 3.5-11-9.2-6.7h11.4zm64.9 0l3.5 10.9h11.5l-9.3 6.7 3.6 10.9-9.3-6.7-9.3 6.7 3.6-11-9.3-6.7h11.5z"
+                  transform="scale(.9375)" />
+              </g>
+            </svg>
+          </div>
+          <h3 class="country-card__title">США</h3>
+          <p class="country-card__description">Широкий выбор автомобилей с американского рынка. Отличное соотношение
+            цена-качество.</p>
+          <ul class="country-card__features">
+            <li class="country-card__feature">Популярные бренды</li>
+            <li class="country-card__feature">Низкие цены</li>
+            <li class="country-card__feature">Хорошее состояние</li>
+          </ul>
+        </div>
+        <div class="country-card">
+          <div class="country-card__flag">
+            <svg xmlns="http://www.w3.org/2000/svg" id="country-card__flag-svg" viewBox="0 0 640 480">
+              <defs>
+                <clipPath id="jp-a">
+                  <path fill-opacity=".7" d="M-88 32h640v480H-88z" />
+                </clipPath>
+              </defs>
+              <g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#jp-a)" transform="translate(88 -32)">
+                <path fill="#fff" d="M-128 32h720v480h-720z" />
+                <circle cx="523.1" cy="344.1" r="194.9" fill="#d30000"
+                  transform="translate(-168.4 8.6) scale(.76554)" />
+              </g>
+            </svg>
+          </div>
+          <h3 class="country-card__title">Япония</h3>
+          <p class="country-card__description">Качественные японские автомобили с отличной репутацией надежности.</p>
+          <ul class="country-card__features">
+            <li class="country-card__feature">Высокое качество</li>
+            <li class="country-card__feature">Надежность</li>
+            <li class="country-card__feature">Экономичность</li>
+          </ul>
+        </div>
+        <div class="country-card">
+          <div class="country-card__flag">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              id="country-card__flag-svg" viewBox="0 0 640 480">
+              <defs>
+                <path id="a" fill="#ffde00" d="M-.6.8L0-1 .6.8-1-.3h2z" />
+              </defs>
+              <path fill="#de2910" d="M0 0h640v480H0z" />
+              <use width="30" height="20" transform="matrix(71.9991 0 0 72 120 120)" xlink:href="#a" />
+              <use width="30" height="20" transform="matrix(-12.33562 -20.5871 20.58684 -12.33577 240.3 48)"
+                xlink:href="#a" />
+              <use width="30" height="20" transform="matrix(-3.38573 -23.75998 23.75968 -3.38578 288 95.8)"
+                xlink:href="#a" />
+              <use width="30" height="20" transform="matrix(6.5991 -23.0749 23.0746 6.59919 288 168)" xlink:href="#a" />
+              <use width="30" height="20" transform="matrix(14.9991 -18.73557 18.73533 14.99929 240 216)"
+                xlink:href="#a" />
+            </svg>
+
+          </div>
+          <h3 class="country-card__title">Китай</h3>
+          <p class="country-card__description">Современные китайские автомобили с передовыми технологиями.</p>
+          <ul class="country-card__features">
+            <li class="country-card__feature">Современные технологии</li>
+            <li class="country-card__feature">Доступные цены</li>
+            <li class="country-card__feature">Богатая комплектация</li>
+          </ul>
+        </div>
+        <div class="country-card">
+          <div class="country-card__flag">
+            <svg xmlns="http://www.w3.org/2000/svg" class="country-card__flag-svg" viewBox="0 0 640 480">
+              <defs>
+                <clipPath id="kr-a">
+                  <path fill-opacity=".7" d="M-95.8-.4h682.7v512H-95.8z" />
+                </clipPath>
+              </defs>
+              <g fill-rule="evenodd" clip-path="url(#kr-a)" transform="translate(89.8 .4) scale(.9375)">
+                <path fill="#fff" d="M610.6 511.6h-730.2V-.4h730.2z" />
+                <path fill="#fff" d="M251.9 256a112.5 112.5 0 11-225 0 112.5 112.5 0 01225 0z" />
+                <path fill="#c70000"
+                  d="M393 262.6c0 81-65 146.8-145.3 146.8s-145.2-65.8-145.2-146.8 65-146.9 145.3-146.9S393 181.6 393 262.6z" />
+                <path d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8zm27.4 23.7l83.6-96.7 19.9 17-83.7 96.9z" />
+                <path d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8z" />
+                <path d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8zm55.4 48l83.6-96.9 19.9 17.2-83.7 96.8z" />
+                <path d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8z" />
+                <path
+                  d="M-49.4 126.4l83.6-96.7 19.9 17.1-83.7 96.8zm508.8-96.8l83 97.4-20 17-83-97.4zm-55.7 47.5l83 97.4-20 17-83-97.4z" />
+                <path fill="#fff" d="M417.6 133.2L496 65.4l14.7 17-84 75.4-9.3-24.6z" />
+                <path
+                  d="M514.2 372l-80.4 95.8-19.7-16.4 80.4-95.8zM431.8 53.1l83 97.4-19.9 17L412 70zm109.7 341.6L461 490.5l-19.8-16.4 80.5-95.8zm-55.1-45.8L406 444.7l-19.7-16.4 80.4-95.8z" />
+                <path fill="#3d5897"
+                  d="M104.6 236.7c4.6 37 11.3 78.2 68.2 82.4 21.3 1.3 62.8-5 77-63.2 18.8-55.8 75-71.8 113.3-41.6C385 228.5 391 251 392.4 268c-1.7 54-32.9 101-72.8 122-46 27.3-109.6 27.9-165.3-13.5-25.1-23.5-60.2-67-49.7-139.8z" />
+                <path fill="#fff" d="M436 370.6l78.6 67.6-14.6 17-87.1-71.8 23-12.8z" />
+                <path d="M-1.9 357.2l83 97.3-20 17-83-97.3z" />
+                <path fill="#fff" d="M-16.2 437.3l78.6-67.9 14.7 17-84 75.5-9.3-24.7z" />
+                <path d="M25.7 333.7l83 97.3-20 17-83-97.3zM-30 381.2l83 97.3-20 17-83-97.3z" />
+              </g>
+            </svg>
+          </div>
+          <h3 class="country-card__title">Корея</h3>
+          <p class="country-card__description">Корейские автомобили известны своим качеством и стильным дизайном.</p>
+          <ul class="country-card__features">
+            <li class="country-card__feature">Стильный дизайн</li>
+            <li class="country-card__feature">Качественная сборка</li>
+            <li class="country-card__feature">Гарантия качества</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Reviews Section -->
+  <section id="videos" class="videos">
+    <div class="container">
+      <h2 class="section-title">Видеоотзывы наших клиентов</h2>
+      <div class="videos__grid">
+        <div class="video-card">
+          <div class="video" id="video-1">
+            <img class="video__thumbnail" src="lazy-video/preview.jpg" aria-hidden="true" decoding="async"
+              loading="lazy" alt="">
+            <button class="video__play" aria-label="Запустить видео">
+              <svg fill="#fff" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 60 60">
+                <g>
+                  <path
+                    d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+                                        c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+                                        C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z" />
+                  <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                                        S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="video-card__content">
+            <h3 class="video-card__title">Отзыв 1</h3>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video" id="video-2">
+            <img class="video__thumbnail" src="lazy-video/preview.jpg" aria-hidden="true" decoding="async"
+              loading="lazy" alt="">
+            <button class="video__play" aria-label="Запустить видео">
+              <svg fill="#fff" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 60 60">
+                <g>
+                  <path
+                    d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+                                        c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+                                        C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z" />
+                  <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                                        S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="video-card__content">
+            <h3 class="video-card__title">ОТзыв 2</h3>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video" id="video-3">
+            <img class="video__thumbnail" src="lazy-video/preview.jpg" aria-hidden="true" decoding="async"
+              loading="lazy" alt="">
+            <button class="video__play" aria-label="Запустить видео">
+              <svg fill="#fff" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 60 60">
+                <g>
+                  <path
+                    d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+                                        c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+                                        C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z" />
+                  <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                                        S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="video-card__content">
+            <h3 class="video-card__title">Отзыв 3</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+  <section id="articles" class="articles">
+    <div class="container">
+      <h2 class="section-title">Полезные статьи</h2>
+      <div class="articles__grid">
+        <article class="article-card">
+          <div class="article-card__content">
+            <h3 class="article-card__title">Как выбрать автомобиль из США</h3>
+            <p class="article-card__excerpt">Полезные советы по выбору автомобиля на американском рынке. На что обратить
+              внимание при покупке.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">15.01.2024</span>
+              <span class="article-card__read-time">5 мин чтения</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать далее</a>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__content">
+            <h3 class="article-card__title">Особенности японских автомобилей</h3>
+            <p class="article-card__excerpt">Почему японские автомобили так популярны в России и какие модели стоит
+              рассмотреть.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">10.01.2024</span>
+              <span class="article-card__read-time">7 мин чтения</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать далее</a>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__content">
+            <h3 class="article-card__title">Китайские автомобили 2024</h3>
+            <p class="article-card__excerpt">Обзор лучших китайских автомобилей 2024 года. Новые технологии и доступные
+              цены.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">05.01.2024</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать далее</a>
+          </div>
+        </article>
+      </div>
+      <div class="articles__actions">
+        <a href="articles.html" class="btn btn--secondary">Все статьи</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto News Section -->
+  <section id="auto-news" class="auto-news">
+    <div class="container">
+      <h2 class="section-title">Новинки автопрома</h2>
+      <div class="auto-news__grid">
+        <article class="auto-news__card">
+          <div class="auto-news__content">
+            <div class="auto-news__header">
+              <span class="auto-news__date">20.01.2024</span>
+            </div>
+            <h3 class="auto-news__title">Tesla Model Y 2024 - обновленная версия</h3>
+            <p class="auto-news__excerpt">Компания Tesla представила обновленную версию популярного кроссовера Model Y с
+              улучшенной батареей и новыми технологиями автопилота.</p>
+            <a href="news/news.html" class="auto-news__link">Читать далее</a>
+          </div>
+        </article>
+
+        <article class="auto-news__card">
+          <div class="auto-news__content">
+            <div class="auto-news__header">
+              <span class="auto-news__date">18.01.2024</span>
+            </div>
+            <h3 class="auto-news__title">Toyota Camry 2024 - гибридная технология</h3>
+            <p class="auto-news__excerpt">Новое поколение Toyota Camry получило усовершенствованную гибридную силовую
+              установку и обновленный интерьер с современными технологиями.</p>
+            <a href="news/news.html" class="auto-news__link">Читать далее</a>
+          </div>
+        </article>
+
+        <article class="auto-news__card">
+          <div class="auto-news__content">
+            <div class="auto-news__header">
+              <span class="auto-news__date">15.01.2024</span>
+            </div>
+            <h3 class="auto-news__title">BYD Tang - китайский премиум SUV</h3>
+            <p class="auto-news__excerpt">Китайский производитель BYD выпустил новый премиальный электрический SUV Tang
+              с запасом хода до 600 км и роскошным интерьером.</p>
+            <a href="news/news.html" class="auto-news__link">Читать далее</a>
+          </div>
+        </article>
+
+        <article class="auto-news__card">
+          <div class="auto-news__content">
+            <div class="auto-news__header">
+              <span class="auto-news__date">12.01.2024</span>
+            </div>
+            <h3 class="auto-news__title">Hyundai Elantra 2024 - спортивный дизайн</h3>
+            <p class="auto-news__excerpt">Корейский седан Hyundai Elantra получил обновленный спортивный дизайн, новую
+              мультимедийную систему и улучшенные характеристики безопасности.</p>
+            <a href="news/news.html" class="auto-news__link">Читать далее</a>
+          </div>
+        </article>
+
+        <article class="auto-news__card">
+          <div class="auto-news__content">
+            <div class="auto-news__header">
+              <span class="auto-news__date">10.01.2024</span>
+            </div>
+            <h3 class="auto-news__title">Ford Mustang Mach-E GT - электрический спорткар</h3>
+            <p class="auto-news__excerpt">Ford представил высокопроизводительную версию электрического кроссовера
+              Mustang Mach-E GT с мощностью 480 л.с. и разгоном до 100 км/ч за 3.5 секунды.</p>
+            <a href="news/news.html" class="auto-news__link">Читать далее</a>
+          </div>
+        </article>
+
+        <article class="auto-news__card">
+          <div class="auto-news__content">
+            <div class="auto-news__header">
+              <span class="auto-news__date">08.01.2024</span>
+            </div>
+            <h3 class="auto-news__title">Nissan Ariya - инновации будущего</h3>
+            <p class="auto-news__excerpt">Электрический кроссовер Nissan Ariya демонстрирует технологии будущего с
+              системой ProPILOT 2.0 и инновационным интерьером без физических кнопок.</p>
+            <a href="news/news.html" class="auto-news__link">Читать далее</a>
+          </div>
+        </article>
+      </div>
+      <div class="auto-news__actions">
+        <a href="auto-news.html" class="btn btn--secondary">Все новинки</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Свяжитесь с нами</h2>
+      <div class="contact__content">
+        <div class="contact__info">
+          <div class="contact-item">
+            <i class="contact-item__icon fas fa-user"></i>
+            <div class="contact-item__content">
+              <h4 class="contact-item__title">Руководитель</h4>
+              <p class="contact-item__text">Парамонов Максим</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="contact-item__icon fas fa-phone"></i>
+            <div class="contact-item__content">
+              <h4 class="contact-item__title">Телефон</h4>
+              <p class="contact-item__text">+7 (911) 155-55-07</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="contact-item__icon fas fa-map-marker-alt"></i>
+            <div class="contact-item__content">
+              <h4 class="contact-item__title">Адрес офиса</h4>
+              <p class="contact-item__text">Санкт-Петербург</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="contact-item__icon fas fa-clock"></i>
+            <div class="contact-item__content">
+              <h4 class="contact-item__title">Время доставки</h4>
+              <p class="contact-item__text">1-2 месяца до Владивостока</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="contact-item__icon fas fa-users"></i>
+            <div class="contact-item__content">
+              <h4 class="contact-item__title">Наши клиенты</h4>
+              <p class="contact-item__text">Более 300 довольных клиентов</p>
+            </div>
+          </div>
+          <div class="messengers">
+            <h4 class="messengers__title">Свяжитесь через мессенджеры:</h4>
+            <div class="messengers__list">
+              <a href="https://t.me/autostory_spb" target="_blank" class="messenger-link messenger-link--telegram">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+              </a>
+              <a href="https://wa.me/79111555507" target="_blank" class="messenger-link messenger-link--whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://vk.com/auto_story_spb" target="_blank" class="messenger-link messenger-link--vk">
+                <i class="fab fa-vk"></i>
+                <span>ВКонтакте</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Закомментированная форма обратной связи -->
+        <!--
                 <div class="contact__form">
                     <h3 class="contact__form-title">Получить консультацию</h3>
                     <form id="contactForm" class="form">
@@ -385,49 +651,48 @@
                     </form>
                 </div>
                 -->
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <div class="footer__logo">
+            <img src="logo.jpg" alt="Auto Story SPB" class="footer-logo-image">
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <div class="footer__logo">
-                        <img src="logo.jpg" alt="Auto Story SPB" class="footer-logo-image">
-                        <h3 class="footer__title">Auto Story SPB</h3>
-                        <p class="footer__description">Только проверенные автомобили из США, Японии, Китая и Кореи</p>
-                    </div>
-                </div>
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Контакты</h4>
-                    <p class="footer__text">Парамонов Максим</p>
-                    <p class="footer__text">+7 (900) 000-00-00</p>
-                    <p class="footer__text">Санкт-Петербург</p>
-                </div>
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Услуги</h4>
-                    <ul class="footer__list">
-                        <li class="footer__item">Подбор автомобиля</li>
-                        <li class="footer__item">Проверка качества</li>
-                        <li class="footer__item">Доставка</li>
-                        <li class="footer__item">Оформление документов</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2024 Auto Story SPB. Все права защищены.</p>
-            </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Контакты</h4>
+          <p class="footer__text">Парамонов Максим</p>
+          <p class="footer__text">+7 (911) 155-55-07</p>
         </div>
-    </footer>
 
-    <!-- Back to top button -->
-    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Услуги</h4>
+          <ul class="footer__list">
+            <li class="footer__item">Подбор автомобиля</li>
+            <li class="footer__item">Проверка качества</li>
+            <li class="footer__item">Доставка</li>
+            <li class="footer__item">Оформление документов</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Auto Story SPB. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <!-- Back to top button -->
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="plugin.js"></script>
+  <script src="script.js"></script>
 </body>
 
-</html> 
+</html>

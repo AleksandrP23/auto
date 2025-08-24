@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новинка автопрома - Auto Story SPB</title>
+  <meta name="description" content="Обзор новинки автомобильного рынка от экспертов Auto Story SPB.">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="page">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <a href="../index.html" class="header__logo">
+          <img src="../logo.jpg" alt="Auto Story SPB" class="logo-image">
+          <p class="header__subtitle">Только проверенные автомобили</p>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="../index.html#about" class="nav__link">О нас</a>
+          <a href="../index.html#services" class="nav__link">Услуги</a>
+          <a href="../index.html#countries" class="nav__link">Страны</a>
+          <a href="../index.html#videos" class="nav__link">Отзывы</a>
+          <a href="../articles.html" class="nav__link">Статьи</a>
+          <a href="../auto-news.html" class="nav__link nav__link--active">Новинки</a>
+          <a href="../index.html#contact" class="nav__link">Контакты</a>
+        </nav>
+        <button class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <section class="breadcrumbs">
+    <div class="container">
+      <nav class="breadcrumbs__nav">
+        <a href="../index.html" class="breadcrumbs__link">Главная</a>
+        <span class="breadcrumbs__separator">→</span>
+        <a href="../auto-news.html" class="breadcrumbs__link">Новинки</a>
+        <span class="breadcrumbs__separator">→</span>
+        <span class="breadcrumbs__current">Обзор новинки</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__content">
+        <div class="article-hero__text">
+          <h1 class="article-hero__title">Новые машины 2024</h1>
+          <p class="article-hero__subtitle">Самые крутые модели этого года</p>
+        </div>
+        <div class="article-hero__image">
+          <img src="../preview.jpg" alt="Auto Story SPB">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <section class="article-content">
+    <div class="container">
+      <div class="article-content__wrapper">
+        
+        <article class="article-text">
+          
+          <!-- Photo Gallery -->
+          <section class="photo-gallery">
+            <h2>Новые машины</h2>
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="../preview.jpg" alt="Tesla Model 3 2024" class="gallery-image">
+                <div class="gallery-overlay">
+                  <h3>Tesla Model 3</h3>
+                  <p>Электромобиль</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="../preview.jpg" alt="BYD Seal" class="gallery-image">
+                <div class="gallery-overlay">
+                  <h3>BYD Seal</h3>
+                  <p>Из Китая</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="../preview.jpg" alt="Genesis GV70" class="gallery-image">
+                <div class="gallery-overlay">
+                  <h3>Genesis GV70</h3>
+                  <p>SUV из Кореи</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="../preview.jpg" alt="Toyota Camry 2024" class="gallery-image">
+                <div class="gallery-overlay">
+                  <h3>Toyota Camry</h3>
+                  <p>Седан</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="../preview.jpg" alt="Ford Mustang Mach-E" class="gallery-image">
+                <div class="gallery-overlay">
+                  <h3>Ford Mustang</h3>
+                  <p>Электрический</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="../preview.jpg" alt="Hyundai Santa Fe 2024" class="gallery-image">
+                <div class="gallery-overlay">
+                  <h3>Hyundai Santa Fe</h3>
+                  <p>Семейный</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="article-cta">
+            <h3>Понравилась машина?</h3>
+            <p>Поможем найти и привезти любую</p>
+            <a href="../index.html#contact" class="btn btn--primary">Получить консультацию</a>
+          </div>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar">
+          
+          <div class="sidebar-widget">
+            <h3>Популярные новинки</h3>
+            <div class="related-articles">
+              <a href="news.html" class="related-article">
+                <img src="../preview.jpg" alt="Новинка">
+                <div class="related-article__content">
+                  <h4>Tesla Model 3 2024</h4>
+                  <span>🔋 Электромобиль</span>
+                </div>
+              </a>
+              <a href="news.html" class="related-article">
+                <img src="../preview.jpg" alt="Новинка">
+                <div class="related-article__content">
+                  <h4>BYD Seal</h4>
+                  <span>🇨🇳 Китай</span>
+                </div>
+              </a>
+              <a href="news.html" class="related-article">
+                <img src="../preview.jpg" alt="Новинка">
+                <div class="related-article__content">
+                  <h4>Genesis GV70</h4>
+                  <span>🏆 Премиум</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to News -->
+  <section class="back-to-articles">
+    <div class="container">
+      <a href="../auto-news.html" class="btn btn--secondary">← Все новинки</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <div class="footer__logo">
+            <img src="../logo.jpg" alt="Auto Story SPB" class="footer-logo-image">
+          </div>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Контакты</h4>
+          <p class="footer__text">Парамонов Максим</p>
+          <p class="footer__text">+7 (911) 155-55-07</p>
+        </div>
+ 
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Услуги</h4>
+          <ul class="footer__list">
+            <li class="footer__item">Подбор автомобиля</li>
+            <li class="footer__item">Проверка качества</li>
+            <li class="footer__item">Доставка</li>
+            <li class="footer__item">Оформление документов</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Auto Story SPB. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="../plugin.js"></script>
+  <script src="../script.js"></script>
+</body>
+
+</html>

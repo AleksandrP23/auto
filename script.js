@@ -10,9 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
@@ -22,9 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scrollToContact = function() {
         const contactSection = document.querySelector('#contact');
         if (contactSection) {
-            contactSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         }
     };
@@ -236,15 +242,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add parallax effect to hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            const rate = scrolled * -0.5;
-            hero.style.transform = `translateY(${rate}px)`;
-        }
-    });
 });
 
 // Mobile menu toggle
@@ -329,4 +326,33 @@ notificationStyles.textContent = `
         transition: opacity 0.5s ease;
     }
 `;
-document.head.appendChild(notificationStyles); 
+document.head.appendChild(notificationStyles);
+
+// Initialize lazy videos
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize video players with video.mp4 file only if containers exist
+    const video1Container = document.getElementById("video-1");
+    const video2Container = document.getElementById("video-2");
+    const video3Container = document.getElementById("video-3");
+    
+    if (video1Container) {
+        const video1 = new GraphLazyVideo("video.MP4", {
+            container: video1Container,
+            isFile: true
+        });
+    }
+
+    if (video2Container) {
+        const video2 = new GraphLazyVideo("video.MP4", {
+            container: video2Container,
+            isFile: true
+        });
+    }
+
+    if (video3Container) {
+        const video3 = new GraphLazyVideo("video.MP4", {
+            container: video3Container,
+            isFile: true
+        });
+    }
+}); 

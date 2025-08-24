@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Статьи - Auto Story SPB | Полезные советы по покупке авто</title>
+  <meta name="description" content="Полезные статьи о покупке автомобилей из США, Японии, Китая и Кореи. Советы экспертов Auto Story SPB.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="page">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <a href="index.html" class="header__logo">
+          <img src="logo.jpg" alt="Auto Story SPB" class="logo-image">
+          <p class="header__subtitle">Только проверенные автомобили</p>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="index.html#about" class="nav__link">О нас</a>
+          <a href="index.html#services" class="nav__link">Услуги</a>
+          <a href="index.html#countries" class="nav__link">Страны</a>
+          <a href="index.html#videos" class="nav__link">Отзывы</a>
+          <a href="articles.html" class="nav__link nav__link--active">Статьи</a>
+          <a href="auto-news.html" class="nav__link">Новинки</a>
+          <a href="index.html#contact" class="nav__link">Контакты</a>
+        </nav>
+        <button class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Articles Hero Section -->
+  <section class="articles-hero">
+    <div class="container">
+      <div class="articles-hero__content">
+        <h1 class="articles-hero__title">Полезные статьи о покупке авто</h1>
+        <p class="articles-hero__subtitle">Экспертные советы и практические руководства от Auto Story SPB</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles Grid Section -->
+  <section class="articles-section">
+    <div class="container">
+      <div class="articles__grid">
+        
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Покупка авто из США">
+            <div class="article-card__country">🇺🇸 США</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Как купить авто из США: пошаговое руководство</h3>
+            <p class="article-card__excerpt">Полный гайд по покупке автомобиля из Америки: от поиска до доставки в Россию. Особенности аукционов, документооборота и растаможки.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">15 декабря 2024</span>
+              <span class="article-card__read-time">5 мин чтения</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать статью</a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Японские автомобили">
+            <div class="article-card__country">🇯🇵 Япония</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Особенности покупки японских автомобилей</h3>
+            <p class="article-card__excerpt">Что нужно знать о японском автопроме: система аукционов, состояние машин, правый руль и особенности эксплуатации в России.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">12 декабря 2024</span>
+              <span class="article-card__read-time">4 мин чтения</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать статью</a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Китайские электромобили">
+            <div class="article-card__country">🇨🇳 Китай</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Китайские электромобили: что стоит знать</h3>
+            <p class="article-card__excerpt">Обзор китайского рынка электромобилей: лучшие бренды, технологии, цены и перспективы покупки для российского рынка.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">10 декабря 2024</span>
+              <span class="article-card__read-time">6 мин чтения</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать статью</a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Корейские автомобили">
+            <div class="article-card__country">🇰🇷 Корея</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Корейские авто: надежность и качество</h3>
+            <p class="article-card__excerpt">Почему корейские автомобили становятся все популярнее: анализ брендов Hyundai, Kia, Genesis и их преимуществ на российском рынке.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">8 декабря 2024</span>
+              <span class="article-card__read-time">4 мин чтения</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать статью</a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Растаможка автомобиля">
+            <div class="article-card__country">💰 Документы</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Растаможка автомобиля: документы и процедуры</h3>
+            <p class="article-card__excerpt">Подробное руководство по растаможке импортного автомобиля: необходимые документы, пошлины, сроки и пошаговый алгоритм действий.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">5 декабря 2024</span>
+              <span class="article-card__read-time">7 мин чтения</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать статью</a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Техосмотр импортного авто">
+            <div class="article-card__country">🔧 Техосмотр</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Техосмотр импортного авто в России</h3>
+            <p class="article-card__excerpt">Особенности прохождения техосмотра для импортных автомобилей: требования, документы, возможные проблемы и их решения.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">3 декабря 2024</span>
+              <span class="article-card__read-time">5 мин чтения</span>
+            </div>
+            <a href="articles/article.html" class="article-card__link">Читать статью</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Home -->
+  <section class="back-to-home">
+    <div class="container">
+      <div class="back-to-home__content">
+        <h3>Готовы купить автомобиль?</h3>
+        <p>Свяжитесь с нами для консультации и помощи в выборе идеального авто</p>
+        <a href="index.html#contact" class="btn btn--primary">Получить консультацию</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <div class="footer__logo">
+            <img src="logo.jpg" alt="Auto Story SPB" class="footer-logo-image">
+          </div>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Контакты</h4>
+          <p class="footer__text">Парамонов Максим</p>
+          <p class="footer__text">+7 (911) 155-55-07</p>
+        </div>
+
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Услуги</h4>
+          <ul class="footer__list">
+            <li class="footer__item">Подбор автомобиля</li>
+            <li class="footer__item">Проверка качества</li>
+            <li class="footer__item">Доставка</li>
+            <li class="footer__item">Оформление документов</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Auto Story SPB. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="plugin.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

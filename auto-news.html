@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новинки автопрома - Auto Story SPB | Последние модели авто</title>
+  <meta name="description" content="Актуальные новинки автомобильного рынка США, Японии, Китая и Кореи. Обзоры новых моделей от экспертов Auto Story SPB.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="page">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <a href="index.html" class="header__logo">
+          <img src="logo.jpg" alt="Auto Story SPB" class="logo-image">
+          <p class="header__subtitle">Только проверенные автомобили</p>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="index.html#about" class="nav__link">О нас</a>
+          <a href="index.html#services" class="nav__link">Услуги</a>
+          <a href="index.html#countries" class="nav__link">Страны</a>
+          <a href="index.html#videos" class="nav__link">Отзывы</a>
+          <a href="articles.html" class="nav__link">Статьи</a>
+          <a href="auto-news.html" class="nav__link nav__link--active">Новинки</a>
+          <a href="index.html#contact" class="nav__link">Контакты</a>
+        </nav>
+        <button class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Auto News Hero Section -->
+  <section class="articles-hero">
+    <div class="container">
+      <div class="articles-hero__content">
+        <h1 class="articles-hero__title">Новинки автопрома 2024</h1>
+        <p class="articles-hero__subtitle">Последние модели и тренды автомобильной индустрии из США, Японии, Китая и Кореи</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto News Grid Section -->
+  <section class="articles-section">
+    <div class="container">
+      <div class="articles__grid">
+        
+        <!-- News 1 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Tesla Model 3 2024">
+            <div class="article-card__country">🔋 Электромобиль</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Tesla Model 3 2024: революционные обновления</h3>
+            <p class="article-card__excerpt">Новая версия популярного электромобиля получила улучшенную батарею, обновленный интерьер и увеличенный запас хода до 600 км.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">20 декабря 2024</span>
+              <span class="article-card__read-time">4 мин чтения</span>
+            </div>
+            <a href="news/news.html" class="article-card__link">Читать обзор</a>
+          </div>
+        </article>
+
+        <!-- News 2 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Toyota Camry 2024">
+            <div class="article-card__country">🇯🇵 Япония</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Toyota Camry 2024: новое поколение седана</h3>
+            <p class="article-card__excerpt">Обновленная Camry получила гибридную силовую установку, современные технологии безопасности и премиальный интерьер.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">18 декабря 2024</span>
+              <span class="article-card__read-time">5 мин чтения</span>
+            </div>
+            <a href="news/news.html" class="article-card__link">Читать обзор</a>
+          </div>
+        </article>
+
+        <!-- News 3 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="BYD Seal">
+            <div class="article-card__country">🇨🇳 Китай</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">BYD Seal: китайский конкурент Tesla</h3>
+            <p class="article-card__excerpt">Электрический седан премиум-класса с запасом хода 700 км, быстрой зарядкой и доступной ценой выходит на мировой рынок.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">15 декабря 2024</span>
+              <span class="article-card__read-time">6 мин чтения</span>
+            </div>
+            <a href="news/news.html" class="article-card__link">Читать обзор</a>
+          </div>
+        </article>
+
+        <!-- News 4 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Hyundai Santa Fe 2024">
+            <div class="article-card__country">🇰🇷 Корея</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Hyundai Santa Fe 2024: кардинальное обновление</h3>
+            <p class="article-card__excerpt">Популярный SUV получил смелый дизайн, гибридные двигатели и передовые технологии автономного вождения.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">12 декабря 2024</span>
+              <span class="article-card__read-time">4 мин чтения</span>
+            </div>
+            <a href="news/news.html" class="article-card__link">Читать обзор</a>
+          </div>
+        </article>
+
+        <!-- News 5 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Ford Mustang Mach-E">
+            <div class="article-card__country">🇺🇸 США</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Ford Mustang Mach-E: электрический мустанг</h3>
+            <p class="article-card__excerpt">Легендарный Mustang в электрическом исполнении сочетает спортивный характер с экологичностью и высокими технологиями.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">10 декабря 2024</span>
+              <span class="article-card__read-time">5 мин чтения</span>
+            </div>
+            <a href="news/news.html" class="article-card__link">Читать обзор</a>
+          </div>
+        </article>
+
+        <!-- News 6 -->
+        <article class="article-card">
+          <div class="article-card__image">
+            <img src="preview.jpg" alt="Genesis GV70">
+            <div class="article-card__country">🏆 Премиум</div>
+          </div>
+          <div class="article-card__content">
+            <h3 class="article-card__title">Genesis GV70: корейская роскошь</h3>
+            <p class="article-card__excerpt">Премиальный SUV от Genesis устанавливает новые стандарты комфорта, качества и технологий в своем классе.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">8 декабря 2024</span>
+              <span class="article-card__read-time">6 мин чтения</span>
+            </div>
+            <a href="news/news.html" class="article-card__link">Читать обзор</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Home -->
+  <section class="back-to-home">
+    <div class="container">
+      <div class="back-to-home__content">
+        <h3>Заинтересовались новинкой?</h3>
+        <p>Мы поможем найти и доставить любой автомобиль из наших обзоров</p>
+        <a href="index.html#contact" class="btn btn--primary">Получить консультацию</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <div class="footer__logo">
+            <img src="logo.jpg" alt="Auto Story SPB" class="footer__logo-image">
+          </div>
+          <p class="footer__description">
+            Надежная доставка качественных автомобилей из США, Японии, Китая и Кореи. 
+            Более 300 довольных клиентов доверяют нам свой выбор.
+          </p>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Контакты</h4>
+          <div class="footer__contacts">
+            <p class="footer__contact">
+              <i class="fas fa-user"></i>
+              Парамонов Максим
+            </p>
+            <p class="footer__contact">
+              <i class="fas fa-phone"></i>
+              +7 (911) 155-55-07
+            </p>
+            <p class="footer__contact">
+              <i class="fas fa-map-marker-alt"></i>
+              Санкт-Петербург
+            </p>
+          </div>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Мессенджеры</h4>
+          <div class="footer__messengers">
+            <a href="https://t.me/autostory_spb" target="_blank" class="footer__messenger">
+              <i class="fab fa-telegram"></i>
+              Telegram
+            </a>
+            <a href="https://wa.me/79111555507" target="_blank" class="footer__messenger">
+              <i class="fab fa-whatsapp"></i>
+              WhatsApp
+            </a>
+            <a href="https://vk.com/auto_story_spb" target="_blank" class="footer__messenger">
+              <i class="fab fa-vk"></i>
+              ВКонтакте
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © 2024 Auto Story SPB. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="plugin.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
